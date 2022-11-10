@@ -4,12 +4,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.worldcup2022.models.Countries
 import com.example.worldcup2022.presentation.components.CountriesItem
@@ -57,11 +56,27 @@ fun HomeScreen(
     }
 }
 
+//
 @Composable
 fun ShowCountriesLazyList(countries: MutableList<Countries>) {
-    LazyColumn {
-        items(countries) { food ->
-            CountriesItem(food)
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                backgroundColor = Color.White,
+                contentColor = Color.Black,
+                title = {
+                    Text(
+                        color = Color.Black,
+                        text = "World Cup"
+                    )
+                }
+            )
+        }
+    ){
+        LazyColumn {
+            items(countries) { food ->
+                CountriesItem(food)
+            }
         }
     }
 }

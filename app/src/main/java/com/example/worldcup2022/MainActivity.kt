@@ -13,7 +13,6 @@ import com.example.worldcup2022.presentation.viewmodel.WorldCupViewModel
 
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: WorldCupViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -26,7 +25,7 @@ class MainActivity : ComponentActivity() {
                         backgroundColor = Color.White,
                         contentColor = Color.Black
                     )
-                    HomeScreen(viewModel)
+                    HomeScreen()
                 }
             }
         }

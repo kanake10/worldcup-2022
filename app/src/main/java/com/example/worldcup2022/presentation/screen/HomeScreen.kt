@@ -10,13 +10,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.worldcup2022.models.Countries
 import com.example.worldcup2022.presentation.components.CountriesItem
 import com.example.worldcup2022.presentation.state.DataState
 import com.example.worldcup2022.presentation.viewmodel.WorldCupViewModel
 
 @Composable
-fun HomeScreen(viewModel: WorldCupViewModel) {
+fun HomeScreen(
+    viewModel: WorldCupViewModel = hiltViewModel()
+) {
     when (val result = viewModel.response.value) {
         is DataState.Loading -> {
             Box(

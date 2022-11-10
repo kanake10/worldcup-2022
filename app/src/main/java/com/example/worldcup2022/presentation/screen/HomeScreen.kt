@@ -56,7 +56,6 @@ fun HomeScreen(
     }
 }
 
-//
 @Composable
 fun ShowCountriesLazyList(countries: MutableList<Countries>) {
     Scaffold(
@@ -74,8 +73,8 @@ fun ShowCountriesLazyList(countries: MutableList<Countries>) {
         }
     ){
         LazyColumn {
-            items(countries) { food ->
-                CountriesItem(food)
+            items(countries) { item ->
+                CountriesItem(item)
             }
         }
     }

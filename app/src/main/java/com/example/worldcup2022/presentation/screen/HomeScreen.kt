@@ -15,7 +15,6 @@ import com.example.worldcup2022.presentation.components.CountriesItem
 import com.example.worldcup2022.presentation.state.DataState
 import com.example.worldcup2022.presentation.viewmodel.WorldCupViewModel
 
-
 @Composable
 fun HomeScreen(viewModel: WorldCupViewModel) {
     when (val result = viewModel.response.value) {
@@ -54,8 +53,6 @@ fun HomeScreen(viewModel: WorldCupViewModel) {
         }
     }
 }
-
-
 
 @Composable
 fun ShowCountriesLazyList(countries: MutableList<Countries>) {

@@ -3,8 +3,8 @@ package com.example.worldcup2022.presentation.viewmodel
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.example.worldcup2022.presentation.state.DataState
 import com.example.worldcup2022.models.Countries
+import com.example.worldcup2022.presentation.state.DataState
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -35,7 +35,6 @@ class WorldCupViewModel : ViewModel() {
                 override fun onCancelled(error: DatabaseError) {
                     response.value = DataState.Failure(error.message)
                 }
-
             })
     }
 }

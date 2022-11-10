@@ -42,6 +42,5 @@ fun CountriesItem(countries: Countries) {
                 color = Color.White
             )
         }
-
     }
 }

@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.worldcup2022.models.Countries
 import com.example.worldcup2022.presentation.components.CountriesItem
@@ -66,7 +67,7 @@ fun ShowCountriesLazyList(countries: MutableList<Countries>) {
                 title = {
                     Text(
                         color = Color.Black,
-                        text = "World Cup"
+                        text = "World Cup 2022"
                     )
                 }
             )
